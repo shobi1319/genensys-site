@@ -125,7 +125,12 @@ function FooterIcon({
   );
 }
 
-const usefulLinks = [
+const usefulLinks: {
+  label: string;
+  href: string;
+  internal?: boolean;
+  icon: FooterIconName;
+}[] = [
   {
     label: "Privacy Statement",
     href: "/privacy-policy/",
@@ -174,7 +179,11 @@ const usefulLinks = [
   },
 ];
 
-const socialLinks = [
+const socialLinks: {
+  label: string;
+  href: string;
+  icon: FooterIconName;
+}[] = [
   {
     label: "Facebook",
     icon: "facebook",
