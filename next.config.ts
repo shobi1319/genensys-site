@@ -13,8 +13,18 @@ const nextConfig: NextConfig = {
         loaders: ["@tailwindcss/turbopack"],
         as: "*.css",
       },
+      
     },
+    
   },
+  images: {
+  remotePatterns: [
+    {
+      protocol: "https",
+      hostname: "genensys.com",
+    },
+  ],
+},
 };
 
 export default nextConfig;

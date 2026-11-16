@@ -1,0 +1,1180 @@
+/* =========================================
+   GENENSYS TELETHERAPY PAGE
+========================================= */
+
+.tele-page {
+  --tele-navy: #102b49;
+  --tele-blue: #0878bd;
+  --tele-blue-dark: #075d98;
+  --tele-red: #e94b50;
+  --tele-text: #26394c;
+  --tele-muted: #68798a;
+  --tele-border: #e4ebf1;
+  --tele-light: #f4f8fb;
+  color: var(--tele-text);
+  background: #fff;
+  overflow: hidden;
+}
+
+.tele-container {
+  width: min(1180px, calc(100% - 48px));
+  margin-inline: auto;
+}
+
+.tele-page a {
+  text-decoration: none;
+}
+
+/* Shared eyebrow */
+
+.tele-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--tele-blue);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.7px;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+.tele-eyebrow-dot {
+  width: 8px;
+  height: 8px;
+  flex: 0 0 8px;
+  border-radius: 50%;
+  background: var(--tele-red);
+  box-shadow: 0 0 0 4px rgba(233, 75, 80, 0.1);
+}
+
+/* Buttons */
+
+.tele-button {
+  min-height: 52px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 22px;
+  padding: 0 24px;
+  border-radius: 5px;
+  font-size: 13px;
+  font-weight: 750;
+  transition:
+    transform 180ms ease,
+    background 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.tele-button:hover {
+  transform: translateY(-2px);
+}
+
+.tele-button span {
+  font-size: 17px;
+  line-height: 1;
+}
+
+.tele-button-primary {
+  color: #fff;
+  background: var(--tele-blue);
+  box-shadow: 0 9px 22px rgba(8, 120, 189, 0.18);
+}
+
+.tele-button-primary:hover {
+  color: #fff;
+  background: var(--tele-blue-dark);
+  box-shadow: 0 12px 26px rgba(8, 120, 189, 0.24);
+}
+
+.tele-button-light {
+  color: var(--tele-navy);
+  background: #fff;
+}
+
+.tele-button-light:hover {
+  color: var(--tele-blue);
+  background: #f2f8fc;
+}
+
+.tele-text-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--tele-navy);
+  font-size: 13px;
+  font-weight: 750;
+  transition: color 180ms ease;
+}
+
+.tele-text-link:hover {
+  color: var(--tele-blue);
+}
+
+.tele-text-link span {
+  font-size: 17px;
+}
+
+/* =========================================
+   HERO
+========================================= */
+
+.tele-hero {
+  position: relative;
+  padding: 86px 0 0;
+  background:
+    radial-gradient(
+      circle at 80% 28%,
+      rgba(220, 239, 250, 0.8),
+      transparent 34%
+    ),
+    linear-gradient(115deg, #f7fafc 0%, #fff 58%, #f0f7fb 100%);
+}
+
+.tele-hero-glow {
+  position: absolute;
+  top: 0;
+  right: -150px;
+  width: 520px;
+  height: 520px;
+  border-radius: 50%;
+  background: rgba(8, 120, 189, 0.035);
+  pointer-events: none;
+}
+
+.tele-hero-grid {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 0.92fr 1.08fr;
+  align-items: center;
+  gap: 64px;
+  padding-bottom: 78px;
+}
+
+.tele-hero-content {
+  padding: 18px 0 28px;
+}
+
+.tele-hero-content h1 {
+  margin: 27px 0 22px;
+  color: var(--tele-navy);
+  font-size: clamp(48px, 5.4vw, 72px);
+  font-weight: 780;
+  letter-spacing: -3.8px;
+  line-height: 1.04;
+}
+
+.tele-hero-content h1 span,
+.tele-experience-content h2 span,
+.tele-section-heading h2 span,
+.tele-start-heading h2 span {
+  color: var(--tele-blue);
+}
+
+.tele-hero-description {
+  max-width: 490px;
+  margin: 0;
+  color: var(--tele-muted);
+  font-size: 16px;
+  line-height: 1.9;
+}
+
+.tele-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 28px;
+  margin-top: 32px;
+}
+
+.tele-hero-note {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  margin-top: 43px;
+  color: #64788b;
+  font-size: 12px;
+  font-weight: 650;
+}
+
+.tele-note-icon {
+  display: grid;
+  width: 24px;
+  height: 24px;
+  place-items: center;
+  border: 1px solid #d5e5ef;
+  border-radius: 50%;
+  color: var(--tele-blue);
+  font-size: 16px;
+}
+
+.tele-hero-visual {
+  position: relative;
+  min-width: 0;
+  padding: 0 0 25px 18px;
+}
+
+.tele-hero-image-wrap {
+  position: relative;
+  min-height: 465px;
+  overflow: hidden;
+  border-radius: 8px 8px 8px 85px;
+  background: #dbeaf3;
+  box-shadow: 0 26px 65px rgba(16, 43, 73, 0.13);
+}
+
+.tele-hero-image {
+  object-fit: cover;
+  object-position: center;
+}
+
+.tele-floating-card {
+  position: absolute;
+  right: -22px;
+  bottom: 65px;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  min-width: 270px;
+  padding: 17px 19px;
+  border: 1px solid rgba(225, 235, 242, 0.9);
+  border-radius: 7px;
+  background: rgba(255, 255, 255, 0.97);
+  box-shadow: 0 15px 42px rgba(16, 43, 73, 0.14);
+}
+
+.tele-floating-icon {
+  display: grid;
+  width: 42px;
+  height: 42px;
+  flex: 0 0 42px;
+  place-items: center;
+  border-radius: 50%;
+  color: #fff;
+  background: var(--tele-blue);
+  font-size: 25px;
+  font-weight: 400;
+}
+
+.tele-floating-card strong,
+.tele-floating-card small {
+  display: block;
+}
+
+.tele-floating-card strong {
+  color: var(--tele-navy);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.tele-floating-card small {
+  margin-top: 4px;
+  color: var(--tele-muted);
+  font-size: 10px;
+}
+
+.tele-floating-status {
+  width: 8px;
+  height: 8px;
+  margin-left: auto;
+  border-radius: 50%;
+  background: #40b78a;
+}
+
+.tele-visual-caption {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 17px;
+  color: #748496;
+  font-size: 11px;
+  font-weight: 650;
+  letter-spacing: 0.3px;
+}
+
+.tele-caption-line {
+  width: 28px;
+  height: 2px;
+  background: var(--tele-red);
+}
+
+.tele-hero-bottom {
+  position: relative;
+  z-index: 1;
+  border-top: 1px solid rgba(16, 43, 73, 0.08);
+  background: rgba(255, 255, 255, 0.72);
+}
+
+.tele-hero-bottom-inner {
+  min-height: 66px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.tele-hero-bottom-inner > span:not(.tele-bottom-divider) {
+  color: #687c8e;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.3px;
+}
+
+.tele-bottom-divider {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--tele-red);
+}
+
+/* =========================================
+   INTRODUCTION
+========================================= */
+
+.tele-intro-section {
+  padding: 112px 0 105px;
+  background: #fff;
+}
+
+.tele-intro-grid {
+  display: grid;
+  grid-template-columns: 1fr 0.85fr;
+  gap: 90px;
+  align-items: end;
+}
+
+.tele-intro-heading h2 {
+  margin: 22px 0 0;
+  color: var(--tele-navy);
+  font-size: clamp(35px, 4vw, 49px);
+  font-weight: 760;
+  letter-spacing: -2px;
+  line-height: 1.18;
+}
+
+.tele-intro-heading h2 span {
+  color: var(--tele-blue);
+}
+
+.tele-intro-copy p {
+  margin: 0 0 15px;
+  color: var(--tele-muted);
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+.tele-benefit-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 65px;
+}
+
+.tele-benefit {
+  position: relative;
+  min-height: 245px;
+  padding: 29px 27px;
+  border: 1px solid var(--tele-border);
+  border-radius: 6px;
+  background: #fff;
+  transition:
+    transform 200ms ease,
+    box-shadow 200ms ease,
+    border-color 200ms ease;
+}
+
+.tele-benefit:hover {
+  transform: translateY(-5px);
+  border-color: #c8deec;
+  box-shadow: 0 17px 38px rgba(16, 43, 73, 0.07);
+}
+
+.tele-benefit-number {
+  position: absolute;
+  top: 27px;
+  right: 27px;
+  color: #a7b7c5;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.tele-benefit-icon {
+  display: grid;
+  width: 48px;
+  height: 48px;
+  place-items: center;
+  border-radius: 5px;
+  color: var(--tele-blue);
+  background: #edf6fb;
+  font-size: 25px;
+}
+
+.tele-benefit h3 {
+  margin: 24px 0 10px;
+  color: var(--tele-navy);
+  font-size: 17px;
+  font-weight: 750;
+}
+
+.tele-benefit p {
+  margin: 0;
+  color: var(--tele-muted);
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+/* =========================================
+   PATIENT EXPERIENCE
+========================================= */
+
+.tele-experience-section {
+  padding: 94px 0;
+  background: var(--tele-light);
+}
+
+.tele-experience-grid {
+  display: grid;
+  grid-template-columns: 1.02fr 0.98fr;
+  align-items: center;
+  gap: 82px;
+}
+
+.tele-experience-image-wrap {
+  position: relative;
+  min-height: 440px;
+  overflow: hidden;
+  border-radius: 7px 70px 7px 7px;
+  background: #dbeaf3;
+  box-shadow: 0 22px 55px rgba(16, 43, 73, 0.1);
+}
+
+.tele-experience-image {
+  object-fit: cover;
+  object-position: center;
+}
+
+.tele-image-tag {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 12px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  border-radius: 4px;
+  color: var(--tele-navy);
+  background: rgba(255, 255, 255, 0.95);
+  font-size: 11px;
+  font-weight: 750;
+}
+
+.tele-image-tag-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #40b78a;
+}
+
+.tele-experience-content h2 {
+  margin: 23px 0 20px;
+  color: var(--tele-navy);
+  font-size: clamp(36px, 4vw, 48px);
+  font-weight: 760;
+  letter-spacing: -2px;
+  line-height: 1.15;
+}
+
+.tele-experience-content p {
+  margin: 0 0 15px;
+  color: var(--tele-muted);
+  font-size: 13px;
+  line-height: 1.9;
+}
+
+.tele-inline-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 13px;
+  margin-top: 15px;
+  color: var(--tele-blue);
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.tele-inline-link span {
+  font-size: 17px;
+  transition: transform 180ms ease;
+}
+
+.tele-inline-link:hover span {
+  transform: translate(3px, -3px);
+}
+
+/* =========================================
+   CAPABILITIES
+========================================= */
+
+.tele-capabilities-section {
+  padding: 110px 0;
+  background: #fff;
+}
+
+.tele-section-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 50px;
+  margin-bottom: 60px;
+}
+
+.tele-section-heading h2 {
+  margin: 20px 0 0;
+  color: var(--tele-navy);
+  font-size: clamp(36px, 4vw, 48px);
+  font-weight: 760;
+  letter-spacing: -2px;
+  line-height: 1.16;
+}
+
+.tele-section-heading > p {
+  max-width: 390px;
+  margin: 0 0 5px;
+  color: var(--tele-muted);
+  font-size: 13px;
+  line-height: 1.9;
+}
+
+.tele-capabilities-layout {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  align-items: center;
+  gap: 85px;
+  padding: 52px;
+  border: 1px solid var(--tele-border);
+  border-radius: 8px;
+  background: #fbfdfe;
+}
+
+.tele-capabilities-aside {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tele-orbit {
+  position: relative;
+  display: grid;
+  width: 300px;
+  height: 300px;
+  place-items: center;
+}
+
+.tele-orbit-ring {
+  position: absolute;
+  border: 1px solid #d6e7f1;
+  border-radius: 50%;
+}
+
+.tele-orbit-ring-one {
+  inset: 12px;
+}
+
+.tele-orbit-ring-two {
+  inset: 42px;
+  border-style: dashed;
+  border-color: #c5dce9;
+}
+
+.tele-orbit-center {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  width: 145px;
+  height: 145px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: #fff;
+  background: linear-gradient(145deg, #087fc1, #07578f);
+  box-shadow: 0 15px 40px rgba(8, 120, 189, 0.22);
+}
+
+.tele-orbit-center strong {
+  font-size: 19px;
+  line-height: 1.1;
+}
+
+.tele-orbit-center small {
+  margin-top: 8px;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 8px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.tele-orbit-plus {
+  position: absolute;
+  top: 22px;
+  right: 34px;
+  color: #fff;
+  font-size: 20px;
+}
+
+.tele-orbit-node {
+  position: absolute;
+  z-index: 2;
+  display: grid;
+  width: 40px;
+  height: 40px;
+  place-items: center;
+  border: 4px solid #fbfdfe;
+  border-radius: 50%;
+  color: #fff;
+  background: var(--tele-red);
+  font-size: 13px;
+  font-weight: 800;
+  box-shadow: 0 5px 15px rgba(16, 43, 73, 0.12);
+}
+
+.tele-node-top {
+  top: 1px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.tele-node-right {
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+
+.tele-node-bottom {
+  bottom: 1px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.tele-orbit-caption {
+  max-width: 280px;
+  margin: 22px 0 0;
+  color: var(--tele-muted);
+  font-size: 12px;
+  line-height: 1.8;
+  text-align: center;
+}
+
+.tele-capability-list {
+  border-top: 1px solid var(--tele-border);
+}
+
+.tele-capability-item {
+  display: grid;
+  grid-template-columns: 36px 1fr 20px;
+  align-items: start;
+  gap: 15px;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--tele-border);
+}
+
+.tele-capability-number {
+  padding-top: 3px;
+  color: var(--tele-blue);
+  font-size: 10px;
+  font-weight: 850;
+  letter-spacing: 0.5px;
+}
+
+.tele-capability-item h3 {
+  margin: 0 0 6px;
+  color: var(--tele-navy);
+  font-size: 15px;
+  font-weight: 750;
+}
+
+.tele-capability-item p {
+  max-width: 450px;
+  margin: 0;
+  color: var(--tele-muted);
+  font-size: 11px;
+  line-height: 1.75;
+}
+
+.tele-capability-arrow {
+  color: #9aafbf;
+  font-size: 16px;
+}
+
+/* =========================================
+   GETTING STARTED
+========================================= */
+
+.tele-start-section {
+  padding: 105px 0 115px;
+  background: var(--tele-light);
+}
+
+.tele-start-heading {
+  max-width: 660px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.tele-start-heading h2 {
+  margin: 20px 0 14px;
+  color: var(--tele-navy);
+  font-size: clamp(36px, 4vw, 48px);
+  font-weight: 760;
+  letter-spacing: -2px;
+  line-height: 1.17;
+}
+
+.tele-start-heading > p {
+  max-width: 510px;
+  margin: 0 auto;
+  color: var(--tele-muted);
+  font-size: 13px;
+  line-height: 1.85;
+}
+
+.tele-steps-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  margin-top: 62px;
+}
+
+.tele-step {
+  padding: 27px 27px 30px;
+  border: 1px solid var(--tele-border);
+  border-radius: 6px;
+  background: #fff;
+}
+
+.tele-step-top {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 28px;
+}
+
+.tele-step-number {
+  color: var(--tele-blue);
+  font-size: 12px;
+  font-weight: 850;
+}
+
+.tele-step-line {
+  height: 1px;
+  flex: 1;
+  background: #dce7ee;
+}
+
+.tele-step-check {
+  display: grid;
+  width: 25px;
+  height: 25px;
+  place-items: center;
+  border-radius: 50%;
+  color: var(--tele-blue);
+  background: #edf6fb;
+  font-size: 12px;
+  font-weight: 850;
+}
+
+.tele-step h3 {
+  margin: 0 0 12px;
+  color: var(--tele-navy);
+  font-size: 18px;
+  font-weight: 750;
+}
+
+.tele-step p {
+  margin: 0;
+  color: var(--tele-muted);
+  font-size: 12px;
+  line-height: 1.85;
+}
+
+/* =========================================
+   FINAL CTA
+========================================= */
+
+.tele-cta-section {
+  padding: 90px 0;
+  background: #fff;
+}
+
+.tele-cta-card {
+  position: relative;
+  min-height: 350px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  padding: 65px 75px;
+  border-radius: 8px;
+  color: #fff;
+  background:
+    radial-gradient(
+      circle at 90% 10%,
+      rgba(43, 153, 207, 0.35),
+      transparent 34%
+    ),
+    linear-gradient(115deg, #102b49, #075b91);
+}
+
+.tele-cta-content {
+  position: relative;
+  z-index: 2;
+  max-width: 610px;
+}
+
+.tele-cta-content .tele-eyebrow {
+  color: #a9d8f2;
+}
+
+.tele-cta-content h2 {
+  margin: 20px 0 15px;
+  color: #fff;
+  font-size: clamp(36px, 4vw, 49px);
+  font-weight: 760;
+  letter-spacing: -2px;
+  line-height: 1.14;
+}
+
+.tele-cta-content h2 span {
+  color: #7fd0f2;
+}
+
+.tele-cta-content p {
+  max-width: 490px;
+  margin: 0 0 25px;
+  color: rgba(255, 255, 255, 0.73);
+  font-size: 13px;
+  line-height: 1.85;
+}
+
+.tele-cta-decoration {
+  position: absolute;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.tele-cta-decoration-one {
+  width: 430px;
+  height: 430px;
+  top: -175px;
+  right: -20px;
+}
+
+.tele-cta-decoration-two {
+  width: 300px;
+  height: 300px;
+  top: -110px;
+  right: 45px;
+}
+
+.tele-cta-mark {
+  position: absolute;
+  top: 50%;
+  right: 100px;
+  display: grid;
+  width: 190px;
+  height: 190px;
+  place-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 50%;
+  transform: translateY(-50%);
+}
+
+.tele-cta-mark span {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 100px;
+  font-weight: 800;
+  letter-spacing: -10px;
+}
+
+.tele-cta-mark i {
+  position: absolute;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: var(--tele-red);
+}
+
+.tele-cta-mark i:nth-of-type(1) {
+  top: 18px;
+  left: 50%;
+}
+
+.tele-cta-mark i:nth-of-type(2) {
+  right: 10px;
+  bottom: 47px;
+  background: #83d1ef;
+}
+
+.tele-cta-mark i:nth-of-type(3) {
+  bottom: 16px;
+  left: 40px;
+  background: #fff;
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 1050px) {
+  .tele-hero-grid {
+    gap: 35px;
+  }
+
+  .tele-hero-image-wrap {
+    min-height: 400px;
+  }
+
+  .tele-experience-grid {
+    gap: 45px;
+  }
+
+  .tele-capabilities-layout {
+    gap: 40px;
+    padding: 35px;
+  }
+
+  .tele-cta-mark {
+    right: 55px;
+    opacity: 0.65;
+  }
+}
+
+@media (max-width: 800px) {
+  .tele-hero {
+    padding-top: 58px;
+  }
+
+  .tele-hero-grid,
+  .tele-intro-grid,
+  .tele-experience-grid,
+  .tele-capabilities-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .tele-hero-grid {
+    gap: 40px;
+    padding-bottom: 55px;
+  }
+
+  .tele-hero-content h1 {
+    font-size: clamp(48px, 10vw, 66px);
+  }
+
+  .tele-hero-visual {
+    padding-left: 0;
+    padding-right: 12px;
+  }
+
+  .tele-hero-image-wrap {
+    min-height: 420px;
+  }
+
+  .tele-floating-card {
+    right: -10px;
+  }
+
+  .tele-hero-bottom-inner {
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 19px 0;
+  }
+
+  .tele-intro-section,
+  .tele-capabilities-section,
+  .tele-start-section {
+    padding: 75px 0;
+  }
+
+  .tele-intro-grid {
+    gap: 25px;
+  }
+
+  .tele-benefit-grid {
+    gap: 13px;
+    margin-top: 40px;
+  }
+
+  .tele-benefit {
+    padding: 23px 18px;
+  }
+
+  .tele-experience-section {
+    padding: 70px 0;
+  }
+
+  .tele-experience-image-wrap {
+    min-height: 390px;
+  }
+
+  .tele-section-heading {
+    align-items: start;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 35px;
+  }
+
+  .tele-capabilities-layout {
+    gap: 35px;
+    padding: 28px;
+  }
+
+  .tele-steps-grid {
+    gap: 14px;
+    margin-top: 42px;
+  }
+
+  .tele-step {
+    padding: 22px 18px;
+  }
+
+  .tele-cta-card {
+    padding: 55px 40px;
+  }
+
+  .tele-cta-mark {
+    right: 20px;
+    opacity: 0.2;
+  }
+}
+
+@media (max-width: 560px) {
+  .tele-container {
+    width: min(100% - 36px, 1180px);
+  }
+
+  .tele-hero {
+    padding-top: 43px;
+  }
+
+  .tele-hero-content h1 {
+    margin-top: 20px;
+    font-size: 48px;
+    letter-spacing: -2.5px;
+  }
+
+  .tele-hero-description {
+    font-size: 14px;
+  }
+
+  .tele-hero-actions {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .tele-hero-image-wrap {
+    min-height: 310px;
+    border-bottom-left-radius: 55px;
+  }
+
+  .tele-floating-card {
+    right: -5px;
+    bottom: 52px;
+    min-width: 230px;
+    padding: 12px;
+  }
+
+  .tele-hero-bottom-inner {
+    gap: 12px;
+  }
+
+  .tele-hero-bottom-inner > span:not(.tele-bottom-divider) {
+    font-size: 9px;
+  }
+
+  .tele-intro-heading h2,
+  .tele-section-heading h2,
+  .tele-start-heading h2,
+  .tele-experience-content h2 {
+    font-size: 36px;
+    letter-spacing: -1.5px;
+  }
+
+  .tele-benefit-grid,
+  .tele-steps-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .tele-benefit {
+    min-height: auto;
+  }
+
+  .tele-experience-image-wrap {
+    min-height: 290px;
+    border-top-right-radius: 48px;
+  }
+
+  .tele-image-tag {
+    bottom: 12px;
+    left: 12px;
+    padding: 10px 12px;
+    font-size: 10px;
+  }
+
+  .tele-capabilities-layout {
+    padding: 20px 16px;
+  }
+
+  .tele-orbit {
+    width: 260px;
+    height: 260px;
+  }
+
+  .tele-orbit-center {
+    width: 125px;
+    height: 125px;
+  }
+
+  .tele-capability-item {
+    grid-template-columns: 27px 1fr 14px;
+    gap: 9px;
+  }
+
+  .tele-capability-item h3 {
+    font-size: 14px;
+  }
+
+  .tele-cta-section {
+    padding: 60px 0;
+  }
+
+  .tele-cta-card {
+    min-height: 0;
+    padding: 42px 25px;
+  }
+
+  .tele-cta-content h2 {
+    font-size: 36px;
+    letter-spacing: -1.5px;
+  }
+
+  .tele-cta-mark {
+    right: -70px;
+    opacity: 0.12;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tele-page *,
+  .tele-page *::before,
+  .tele-page *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
+
