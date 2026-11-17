@@ -1,5 +1,12 @@
 
 import "./page.css";
+import { createPageMetadata } from "@/lib/metadata";
+
+export const metadata = createPageMetadata(
+  "Privacy Policy",
+  "Read the Genensys privacy policy to understand how information is collected and used.",
+  "/privacy-policy",
+);
 
 const sections = [
   {
@@ -75,7 +82,7 @@ const sections = [
 
 export default function PrivacyPolicyPage() {
   return (
-    <main className="privacy-page">
+    <main id="main-content" className="privacy-page">
       <section className="privacy-hero">
         <div className="privacy-hero-decoration" />
 

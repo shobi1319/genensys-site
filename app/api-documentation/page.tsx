@@ -1,12 +1,12 @@
-import type { Metadata } from "next";
 import type { ReactNode } from "react";
+import { createPageMetadata } from "@/lib/metadata";
 import "./api-documentation.css";
 
-export const metadata: Metadata = {
-  title: "API Documentation",
-  description:
-    "Explore Genensys FHIR API documentation, API terms of service, the API framework, and service-based URLs.",
-};
+export const metadata = createPageMetadata(
+  "API Documentation",
+  "Explore Genensys FHIR API documentation, API terms of service, the API framework, and service-based URLs.",
+  "/api-documentation",
+);
 
 type ApiIconName = "mail" | "document" | "code" | "link" | "send" | "lock";
 

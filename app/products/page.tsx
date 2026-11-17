@@ -1,6 +1,14 @@
 
 import "./products.css";
 import Link from "next/link";
+import { createPageMetadata } from "@/lib/metadata";
+
+export const metadata = createPageMetadata(
+  "Healthcare Products",
+  "Explore Genensys healthcare software, electronic health records, and practice management products.",
+  "/products",
+);
+
 const products = [
   {
     number: "01",
@@ -8,8 +16,7 @@ const products = [
     title: "EHR for Occupational Therapy",
     description:
       "Support occupational therapy workflows with electronic health records and fast electronic claims filing and follow-up.",
-    image:
-      "https://genensys.com/wp-content/uploads/2023/10/doctor-writing-about-routine-medical-checkup-1-scaled.jpg",
+    image: "/images/healthcare-workflow.svg",
     href: "/products/occupational-therapy-ehr",
     tag: "EHR SOFTWARE",
   },
@@ -19,8 +26,7 @@ const products = [
   title: "Tele Therapy Services",
   description:
     "Extend your practice beyond the clinic with flexible virtual consultations and therapy services.",
-  image:
-    "https://genensys.com/wp-content/uploads/2023/11/doctor-offering-medical-teleconsultation-scaled.jpg",
+  image: "/images/telehealth-workflow.svg",
   href: "/products/teletherapy",
   tag: "VIRTUAL CARE",
 },
@@ -30,8 +36,7 @@ const products = [
     title: "Billing",
     description:
       "Streamlined billing software for clinicians, designed to support efficient and accurate billing workflows.",
-    image:
-      "https://genensys.com/wp-content/uploads/2023/10/close-up-businessman-calculating-invoices-using-calculator-scaled.jpg",
+    image: "/images/revenue-cycle-workflow.svg",
     href: "/products/medical-billing",
     tag: "BILLING",
   },
@@ -41,8 +46,7 @@ const products = [
     title: "Patient Care Management",
     description:
       "Patient-focused care management solutions that help clinicians support communication and patient involvement.",
-    image:
-      "https://genensys.com/wp-content/uploads/2023/10/group-doctors-cooperating-while-analyzing-xray-medical-clinic-1-scaled.jpg",
+    image: "/images/patient-care-workflow.svg",
     href: "/products/patient-care",
     tag: "PATIENT PORTAL",
   },
@@ -52,8 +56,7 @@ const products = [
     title: "Simplify Therapy",
     description:
       "Easy-to-use therapy solutions for healthcare professionals, supporting therapy practice and administrative workflows.",
-    image:
-      "https://genensys.com/wp-content/uploads/2023/11/Untitled-design-14.png",
+    image: "/images/therapy-practice-workflow.svg",
     href: "/products/simplify-therapy",
     tag: "THERAPY SOFTWARE",
   },

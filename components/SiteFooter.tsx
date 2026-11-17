@@ -209,12 +209,15 @@ export default function SiteFooter() {
           <div className="footer-brand">
             <Link href="/" className="footer-logo" aria-label="Genensys home">
               <Image
-                src="https://genensys.com/wp-content/uploads/2023/09/logo.webp"
-                alt="Genensys"
-                width={180}
-                height={54}
+                src="/images/genensys-logo.svg"
+                alt=""
+                width={64}
+                height={36}
                 className="footer-logo-image"
               />
+              <span className="footer-wordmark" aria-hidden="true">
+                GENENSYS
+              </span>
             </Link>
             <p>
               Healthcare technology and operational solutions designed to

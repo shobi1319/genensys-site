@@ -1,10 +1,17 @@
 
 import "./book-a-demo.css";
 import Link from "next/link";
+import { createPageMetadata } from "@/lib/metadata";
+
+export const metadata = createPageMetadata(
+  "Book a Demo",
+  "Talk with Genensys about healthcare technology and services for your organization.",
+  "/book-a-demo",
+);
 
 export default function BookADemoPage() {
   return (
-    <main className="demo-page">
+    <main id="main-content" className="demo-page">
       {/* HERO */}
       <section className="demo-hero">
         <div className="demo-container demo-hero-inner">
@@ -125,7 +132,7 @@ export default function BookADemoPage() {
 
                 <p className="demo-sms-copy">
                   Visit our{" "}
-                  <Link href="/privacy-statement/">
+                  <Link href="/privacy-policy/">
                     Privacy Policy
                   </Link>{" "}
                   and Terms of Service for more information.
@@ -147,7 +154,7 @@ export default function BookADemoPage() {
                 </button>
                 <p>
                   By submitting this form, you agree to our{" "}
-                  <Link href="/privacy-statement/">Privacy Policy</Link>.
+                  <Link href="/privacy-policy/">Privacy Policy</Link>.
                 </p>
                 <p className="demo-backend-note">
                   Form submission will be enabled once the website's form

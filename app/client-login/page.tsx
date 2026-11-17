@@ -1,6 +1,15 @@
 
+import Image from "next/image";
 import Link from "next/link";
+import { createPageMetadata } from "@/lib/metadata";
 import "./page.css";
+
+export const metadata = createPageMetadata(
+  "Client Login",
+  "Access your Genensys client portals for Simplify EMR and Simplify Therapy.",
+  "/client-login",
+  true,
+);
 
 const products = [
   {
@@ -25,7 +34,7 @@ const products = [
 
 export default function ClientLoginPage() {
   return (
-    <main className="client-login-page">
+    <main id="main-content" className="client-login-page">
       <section className="client-login-hero">
         <div className="client-login-hero-decoration" />
 
@@ -95,9 +104,12 @@ export default function ClientLoginPage() {
   <div className="client-login-brand-orbit orbit-two" />
 
   <div className="client-login-brand-circle">
-    <img
-      src="https://genensys.com/wp-content/uploads/2023/09/logo-300x61.webp"
-      alt="Genensys"
+    <Image
+      src="/images/genensys-logo.png"
+      alt="Genensys logo"
+      width={54}
+      height={54}
+      sizes="69px"
     />
   </div>
 

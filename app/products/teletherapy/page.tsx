@@ -2,6 +2,13 @@
 import "./teletherapy.css";
 import Image from "next/image";
 import Link from "next/link";
+import { createPageMetadata } from "@/lib/metadata";
+
+export const metadata = createPageMetadata(
+  "Teletherapy Services",
+  "Explore Genensys teletherapy tools and services that help practices support remote care workflows.",
+  "/products/teletherapy",
+);
 
 const benefits = [
   {
@@ -99,7 +106,7 @@ function SectionLabel({
 
 export default function TeletherapyPage() {
   return (
-    <main className="tele-page">
+    <main id="main-content" className="tele-page">
       {/* HERO */}
       <section className="tele-hero">
         <div className="tele-hero-glow" />
@@ -145,8 +152,8 @@ export default function TeletherapyPage() {
           <div className="tele-hero-visual">
             <div className="tele-hero-image-wrap">
               <Image
-                src="https://genensys.com/wp-content/uploads/2023/11/doctor-offering-medical-teleconsultation-scaled.jpg"
-                alt="Doctor providing a medical teleconsultation"
+                src="/images/telehealth-workflow.svg"
+                alt="Illustration of a clinician providing a virtual consultation."
                 fill
                 priority
                 sizes="(max-width: 900px) 100vw, 52vw"
@@ -243,8 +250,8 @@ export default function TeletherapyPage() {
         <div className="tele-container tele-experience-grid">
           <div className="tele-experience-image-wrap">
             <Image
-              src="https://genensys.com/wp-content/uploads/2023/10/closeup-family-having-video-call-with-their-doctor-from-home-during-coronavirus-pandemic-1024x683.jpg"
-              alt="Family having a video consultation with their doctor from home"
+              src="/images/patient-care-workflow.svg"
+              alt="Illustration of a patient and care professional reviewing care information."
               fill
               sizes="(max-width: 900px) 100vw, 48vw"
               className="tele-experience-image"

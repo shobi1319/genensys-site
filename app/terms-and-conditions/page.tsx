@@ -1,6 +1,13 @@
 
 import Link from "next/link";
 import "./page.css";
+import { createPageMetadata } from "@/lib/metadata";
+
+export const metadata = createPageMetadata(
+  "Terms and Conditions",
+  "Review the terms and conditions for using the Genensys website and services.",
+  "/terms-and-conditions",
+);
 
 const terms = [
   {
@@ -104,7 +111,7 @@ const terms = [
 
 export default function TermsAndConditionsPage() {
   return (
-    <main className="terms-page">
+    <main id="main-content" className="terms-page">
       <section className="terms-hero">
         <div className="terms-hero-image" aria-hidden="true" />
 

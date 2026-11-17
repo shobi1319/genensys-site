@@ -1,13 +1,14 @@
 
 import "./occupational-therapy-ehr.css";
 import Link from "next/link";
-import type { Metadata } from "next";
+import Image from "next/image";
+import { createPageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  title: "Occupational Therapy EHR",
-  description:
-    "Explore Genensys occupational therapy EHR software, designed to support clinical documentation, patient management and therapy practice workflows.",
-};
+export const metadata = createPageMetadata(
+  "Occupational Therapy EHR",
+  "Explore Genensys occupational therapy EHR software, designed to support clinical documentation, patient management and therapy practice workflows.",
+  "/products/occupational-therapy-ehr",
+);
 
 const features = [
   {
@@ -83,7 +84,7 @@ const workflow = [
 
 export default function OccupationalTherapyEHRPage() {
   return (
-    <main className="ehr-page">
+    <main id="main-content" className="ehr-page">
       <section className="ehr-hero">
         <div className="ehr-container ehr-hero-layout">
           <div className="ehr-hero-copy">
@@ -120,9 +121,13 @@ export default function OccupationalTherapyEHRPage() {
 
           <div className="ehr-hero-visual">
             <div className="ehr-image-frame">
-              <img
-                src="https://genensys.com/wp-content/uploads/2023/10/doctor-writing-about-routine-medical-checkup-1-scaled.jpg"
-                alt="Healthcare professional documenting patient information"
+              <Image
+                src="/images/healthcare-workflow.svg"
+                alt="Illustration of a healthcare professional using patient and practice workflow tools."
+                width={1200}
+                height={900}
+                sizes="(max-width: 760px) 100vw, 50vw"
+                priority
               />
               <div className="ehr-image-shade" />
               <div className="ehr-image-caption">

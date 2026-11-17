@@ -1,10 +1,17 @@
 
+import { createPageMetadata } from "@/lib/metadata";
 import "./partners.css";
+
+export const metadata = createPageMetadata(
+  "Partners",
+  "Explore partnership opportunities with Genensys in healthcare technology and services.",
+  "/partners",
+);
 import Link from "next/link";
 
 export default function PartnersPage() {
   return (
-    <main className="partners-page">
+    <main id="main-content" className="partners-page">
       <section className="partners-hero">
         <div className="partners-hero-glow" />
 

@@ -1,5 +1,13 @@
 
+import Image from "next/image";
 import Link from "next/link";
+import { createPageMetadata } from "@/lib/metadata";
+
+export const metadata = createPageMetadata(
+  "Genensys | Healthcare Technology and Services",
+  "Genensys supports healthcare organizations with software, interoperability, and operational services designed for better connected workflows.",
+  "/",
+);
 
 function Arrow() {
   return <span aria-hidden="true">→</span>;
@@ -45,108 +53,29 @@ export default function Home() {
             </div>
           </div>
 
-          {/* ILLUSTRATIVE DASHBOARD */}
-          <div
-            className="hero-visual"
-            aria-label="Illustrative healthcare workspace"
-          >
-            <div className="visual-glow" />
-
-            <div className="dashboard-window">
-              <div className="dashboard-topbar">
-                <div className="dashboard-brand">
-                  <span className="mini-brand-icon">G</span>
-                  <span>Healthcare Workspace Preview</span>
-                </div>
-
-                <div className="window-dots">
-                  <i />
-                  <i />
-                  <i />
-                </div>
-              </div>
-
-              <div className="dashboard-body">
-                <aside className="dashboard-sidebar">
-                  <div className="sidebar-symbol active">▦</div>
-                  <div className="sidebar-symbol">♧</div>
-                  <div className="sidebar-symbol">▤</div>
-                  <div className="sidebar-symbol">⌘</div>
-                </aside>
-
-                <div className="dashboard-main">
-                  <div className="dashboard-heading">
-                    <div>
-                      <span className="dashboard-label">WORKSPACE</span>
-                      <h3>Healthcare Overview</h3>
-                    </div>
-                    <span className="dashboard-status">● Connected</span>
-                  </div>
-
-                  <div className="dashboard-cards">
-                    <div className="dashboard-card">
-                      <span>Patient Management</span>
-                      <strong>01</strong>
-                      <small>Organized patient records</small>
-                    </div>
-
-                    <div className="dashboard-card">
-                      <span>Clinical Workflows</span>
-                      <strong>02</strong>
-                      <small>Connected care processes</small>
-                    </div>
-                  </div>
-
-                  <div className="workflow-panel">
-                    <div className="workflow-heading">
-                      <strong>Connected Healthcare</strong>
-                      <span>Workflow overview</span>
-                    </div>
-
-                    <div className="workflow-step">
-                      <span className="workflow-icon blue">01</span>
-                      <div>
-                        <strong>Clinical Information</strong>
-                        <small>Organize healthcare records</small>
-                      </div>
-                      <span className="step-arrow">→</span>
-                    </div>
-
-                    <div className="workflow-step">
-                      <span className="workflow-icon purple">02</span>
-                      <div>
-                        <strong>Interoperability</strong>
-                        <small>Connect systems and data</small>
-                      </div>
-                      <span className="step-arrow">→</span>
-                    </div>
-
-                    <div className="workflow-step">
-                      <span className="workflow-icon red">03</span>
-                      <div>
-                        <strong>Healthcare Operations</strong>
-                        <small>Support practice workflows</small>
-                      </div>
-                      <span className="step-arrow">→</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="floating-tag floating-tag-top">
+          <div className="hero-visual">
+            <div className="visual-glow" aria-hidden="true" />
+            <Image
+              className="hero-illustration"
+              src="/images/healthcare-workflow.svg"
+              alt="Illustration of a healthcare professional using connected patient and practice workflows."
+              width={1200}
+              height={900}
+              sizes="(max-width: 760px) 100vw, 52vw"
+              priority
+            />
+            <div className="floating-tag floating-tag-top" aria-hidden="true">
               <span className="floating-icon blue">✳</span>
               <div>
-                <strong>Connected Care</strong>
-                <small>Technology & Integration</small>
+                <strong>Connected care</strong>
+                <small>Technology &amp; integration</small>
               </div>
             </div>
-
-            <div className="floating-tag floating-tag-bottom">
+            <div className="floating-tag floating-tag-bottom" aria-hidden="true">
               <span className="floating-icon red">+</span>
               <div>
-                <strong>Healthcare First</strong>
-                <small>People-centered technology</small>
+                <strong>People first</strong>
+                <small>Support for practice teams</small>
               </div>
             </div>
           </div>
@@ -198,7 +127,7 @@ export default function Home() {
 
           <div className="product-grid">
             <article className="product-card">
-              <div className="product-icon blue-icon">▦</div>
+              <div className="product-icon blue-icon" aria-hidden="true">▦</div>
               <span className="product-category">
                 ELECTRONIC HEALTH RECORDS
               </span>
@@ -208,13 +137,13 @@ export default function Home() {
                 supporting clinical documentation, scheduling
                 and everyday practice workflows.
               </p>
-              <Link href="/products" className="card-link">
+              <Link href="/products/occupational-therapy-ehr/" className="card-link">
                 Explore Simplify EMR <Arrow />
               </Link>
             </article>
 
             <article className="product-card featured-card">
-              <div className="product-icon red-icon">✳</div>
+              <div className="product-icon red-icon" aria-hidden="true">✳</div>
               <span className="product-category">
                 THERAPY PRACTICE SOFTWARE
               </span>
@@ -224,13 +153,13 @@ export default function Home() {
                 physical therapists and PPECs, with tools for
                 documentation, billing and authorization workflows.
               </p>
-              <Link href="/products" className="card-link">
+              <Link href="/products/simplify-therapy/" className="card-link">
                 Explore Simplify Therapy <Arrow />
               </Link>
             </article>
 
             <article className="product-card">
-              <div className="product-icon purple-icon">⌘</div>
+              <div className="product-icon purple-icon" aria-hidden="true">⌘</div>
               <span className="product-category">
                 HEALTHCARE INTEGRATION
               </span>
@@ -244,6 +173,52 @@ export default function Home() {
                 Explore Interoperability <Arrow />
               </Link>
             </article>
+          </div>
+        </div>
+      </section>
+
+      <section
+        className="home-resources-section"
+        aria-labelledby="home-resources-title"
+      >
+        <div className="section-container">
+          <div className="home-resources-heading">
+            <div>
+              <span className="section-eyebrow">PRODUCT RESOURCES</span>
+              <h2 id="home-resources-title">
+                Useful information, all in one place.
+              </h2>
+            </div>
+            <p>
+              Review product details, technical documentation, and testing
+              information from Genensys.
+            </p>
+          </div>
+          <div className="home-resources-grid">
+            <Link href="/additional-costs/" className="home-resource-card">
+              <span className="home-resource-icon blue-icon" aria-hidden="true">✓</span>
+              <span className="home-resource-copy">
+                <strong>Certification &amp; costs</strong>
+                <small>Certified modules and product information</small>
+              </span>
+              <Arrow />
+            </Link>
+            <Link href="/api-documentation/" className="home-resource-card">
+              <span className="home-resource-icon purple-icon" aria-hidden="true">⌘</span>
+              <span className="home-resource-copy">
+                <strong>FHIR API documentation</strong>
+                <small>Developer documentation and service URLs</small>
+              </span>
+              <Arrow />
+            </Link>
+            <Link href="/real-world-testing/" className="home-resource-card">
+              <span className="home-resource-icon red-icon" aria-hidden="true">↗</span>
+              <span className="home-resource-copy">
+                <strong>Real World Testing</strong>
+                <small>Testing information by criteria and year</small>
+              </span>
+              <Arrow />
+            </Link>
           </div>
         </div>
       </section>
@@ -276,7 +251,7 @@ export default function Home() {
                 of healthcare practices.
               </p>
               <Link href="/solutions" aria-label="Explore medical billing and RCM">
-                <Arrow />
+                Explore solution <Arrow />
               </Link>
             </article>
 
@@ -288,7 +263,7 @@ export default function Home() {
                 and revenue recovery support.
               </p>
               <Link href="/solutions" aria-label="Explore AR and denial management">
-                <Arrow />
+                Explore solution <Arrow />
               </Link>
             </article>
 
@@ -300,7 +275,7 @@ export default function Home() {
                 support for healthcare practices.
               </p>
               <Link href="/solutions" aria-label="Explore eligibility and VOB">
-                <Arrow />
+                Explore solution <Arrow />
               </Link>
             </article>
 
@@ -312,7 +287,7 @@ export default function Home() {
                 credentialing processes.
               </p>
               <Link href="/solutions" aria-label="Explore provider credentialing">
-                <Arrow />
+                Explore solution <Arrow />
               </Link>
             </article>
 
@@ -324,7 +299,7 @@ export default function Home() {
                 back-office practice activities.
               </p>
               <Link href="/solutions" aria-label="Explore office support">
-                <Arrow />
+                Explore solution <Arrow />
               </Link>
             </article>
 
@@ -336,7 +311,7 @@ export default function Home() {
                 practice workflow optimization.
               </p>
               <Link href="/solutions" aria-label="Explore practice management">
-                <Arrow />
+                Explore solution <Arrow />
               </Link>
             </article>
 
@@ -348,7 +323,7 @@ export default function Home() {
                 practice improvement services.
               </p>
               <Link href="/solutions" aria-label="Explore compliance support">
-                <Arrow />
+                Explore solution <Arrow />
               </Link>
             </article>
 
@@ -360,7 +335,7 @@ export default function Home() {
                 and digital marketing services for medical practices.
               </p>
               <Link href="/solutions" aria-label="Explore practice audits and digital support">
-                <Arrow />
+                Explore solution <Arrow />
               </Link>
             </article>
           </div>
@@ -393,7 +368,7 @@ export default function Home() {
 
           <div
             className="interop-visual"
-            aria-label="Illustration of connected healthcare systems"
+            aria-hidden="true"
           >
             <div className="interop-circle circle-one">EHR</div>
             <div className="interop-circle circle-two">FHIR</div>

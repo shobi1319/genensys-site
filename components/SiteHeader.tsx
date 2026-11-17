@@ -2,12 +2,14 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 type MenuItem = {
   label: string;
   href?: string;
 };
+
+type DropdownName = "solutions" | "products";
 
 const solutionGroups: {
   title: string;
@@ -39,6 +41,7 @@ const solutionGroups: {
         href: "/products/occupational-therapy-ehr/",
       },
       { label: "Simplify Therapy", href: "/products/simplify-therapy/" },
+      { label: "Interoperability", href: "/interoperability/" },
       { label: "HIPAA Compliance" },
       { label: "MIPS / MICRA" },
     ],
@@ -127,18 +130,59 @@ function MenuGroups({
 
 export default function SiteHeader() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState<DropdownName | null>(
+    null,
+  );
+  const headerRef = useRef<HTMLElement | null>(null);
+  const mobileMenuButtonRef = useRef<HTMLButtonElement | null>(null);
+  const dropdownButtonRefs = useRef<
+    Record<DropdownName, HTMLButtonElement | null>
+  >({ solutions: null, products: null });
 
   function closeNavigation() {
     setMenuOpen(false);
-    document
-      .querySelectorAll<HTMLDetailsElement>("#main-navigation details[open]")
-      .forEach((dropdown) => {
-        dropdown.open = false;
-      });
+    setActiveDropdown(null);
   }
 
+  useEffect(() => {
+    function handlePointerDown(event: PointerEvent) {
+      const target = event.target;
+      const header = headerRef.current;
+
+      if (target instanceof Node && header && !header.contains(target)) {
+        setMenuOpen(false);
+        setActiveDropdown(null);
+      }
+    }
+
+    function handleKeyDown(event: KeyboardEvent) {
+      if (event.key !== "Escape") {
+        return;
+      }
+
+      if (activeDropdown) {
+        setActiveDropdown(null);
+        dropdownButtonRefs.current[activeDropdown]?.focus();
+        return;
+      }
+
+      if (menuOpen) {
+        setMenuOpen(false);
+        mobileMenuButtonRef.current?.focus();
+      }
+    }
+
+    document.addEventListener("pointerdown", handlePointerDown);
+    document.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      document.removeEventListener("pointerdown", handlePointerDown);
+      document.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [activeDropdown, menuOpen]);
+
   return (
-    <header className="site-header">
+    <header className="site-header" ref={headerRef}>
       <div className="header-inner">
         <Link
           href="/"
@@ -147,10 +191,10 @@ export default function SiteHeader() {
           onClick={closeNavigation}
         >
           <Image
-            src="/images/genensys-logo.png"
+            src="/images/genensys-logo.svg"
             alt="Genensys"
-            width={54}
-            height={54}
+            width={64}
+            height={36}
             priority
             className="brand-logo"
           />
@@ -158,12 +202,16 @@ export default function SiteHeader() {
         </Link>
 
         <button
+          ref={mobileMenuButtonRef}
           className="mobile-menu-button"
           type="button"
           aria-label={menuOpen ? "Close navigation" : "Open navigation"}
           aria-expanded={menuOpen}
           aria-controls="main-navigation"
-          onClick={() => setMenuOpen(!menuOpen)}
+          onClick={() => {
+            setMenuOpen(!menuOpen);
+            setActiveDropdown(null);
+          }}
         >
           <span />
           <span />
@@ -179,35 +227,76 @@ export default function SiteHeader() {
             Home
           </Link>
 
-          <span className="nav-link nav-link-disabled" aria-disabled="true">
-            About Us <span className="nav-coming-soon">Coming soon</span>
-          </span>
-
-          <Link
-            href="/partners/"
-            className="nav-link"
-            onClick={closeNavigation}
-          >
-            Partners
+          <Link href="/about/" className="nav-link" onClick={closeNavigation}>
+            About Us
           </Link>
 
-          <details className="nav-dropdown nav-dropdown-solutions">
-            <summary className="nav-link nav-dropdown-trigger">
+          <div
+            className={`nav-dropdown nav-dropdown-solutions ${
+              activeDropdown === "solutions" ? "is-open" : ""
+            }`}
+          >
+            <button
+              ref={(element) => {
+                dropdownButtonRefs.current.solutions = element;
+              }}
+              type="button"
+              className="nav-link nav-dropdown-trigger"
+              aria-expanded={activeDropdown === "solutions"}
+              aria-controls="solutions-dropdown"
+              onClick={() =>
+                setActiveDropdown((current) =>
+                  current === "solutions" ? null : "solutions",
+                )
+              }
+            >
               Solutions <span className="nav-dropdown-chevron" aria-hidden="true" />
-            </summary>
-            <div className="nav-dropdown-panel nav-dropdown-panel-wide">
+            </button>
+            <div
+              className="nav-dropdown-panel nav-dropdown-panel-wide"
+              id="solutions-dropdown"
+              hidden={activeDropdown !== "solutions"}
+            >
               <MenuGroups
                 groups={solutionGroups}
                 onNavigate={closeNavigation}
               />
+              <Link
+                className="nav-all-solutions"
+                href="/solutions/"
+                onClick={closeNavigation}
+              >
+                View all solutions <span aria-hidden="true">→</span>
+              </Link>
             </div>
-          </details>
+          </div>
 
-          <details className="nav-dropdown nav-dropdown-products">
-            <summary className="nav-link nav-dropdown-trigger">
+          <div
+            className={`nav-dropdown nav-dropdown-products ${
+              activeDropdown === "products" ? "is-open" : ""
+            }`}
+          >
+            <button
+              ref={(element) => {
+                dropdownButtonRefs.current.products = element;
+              }}
+              type="button"
+              className="nav-link nav-dropdown-trigger"
+              aria-expanded={activeDropdown === "products"}
+              aria-controls="products-dropdown"
+              onClick={() =>
+                setActiveDropdown((current) =>
+                  current === "products" ? null : "products",
+                )
+              }
+            >
               Products <span className="nav-dropdown-chevron" aria-hidden="true" />
-            </summary>
-            <div className="nav-dropdown-panel nav-dropdown-panel-products">
+            </button>
+            <div
+              className="nav-dropdown-panel nav-dropdown-panel-products"
+              id="products-dropdown"
+              hidden={activeDropdown !== "products"}
+            >
               <MenuGroups
                 groups={productGroups}
                 onNavigate={closeNavigation}
@@ -220,7 +309,7 @@ export default function SiteHeader() {
                 View all products <span aria-hidden="true">→</span>
               </Link>
             </div>
-          </details>
+          </div>
 
           <span className="nav-link nav-link-disabled" aria-disabled="true">
             Blogs <span className="nav-coming-soon">Coming soon</span>
@@ -228,7 +317,7 @@ export default function SiteHeader() {
 
           <Link
             href="/book-a-demo/"
-            className="nav-link"
+            className="nav-link nav-demo-link"
             onClick={closeNavigation}
           >
             Book A Demo
@@ -239,7 +328,20 @@ export default function SiteHeader() {
             className="nav-link nav-login"
             onClick={closeNavigation}
           >
-            Client Login
+            <svg
+              className="nav-login-icon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="1.8"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              aria-hidden="true"
+            >
+              <circle cx="12" cy="8" r="3.5" />
+              <path d="M5 20a7 7 0 0 1 14 0" />
+            </svg>
+            <span>Client Login</span>
           </Link>
 
           <Link

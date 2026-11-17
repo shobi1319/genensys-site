@@ -1,12 +1,12 @@
-import type { Metadata } from "next";
 import Link from "next/link";
+import { createPageMetadata } from "@/lib/metadata";
 import "./additional-costs.css";
 
-export const metadata: Metadata = {
-  title: "Additional Costs and Certified Modules",
-  description:
-    "Review Simplify EMR v4.0 certified modules, clinical quality measures, costs, API information, and two-factor authentication.",
-};
+export const metadata = createPageMetadata(
+  "Additional Costs and Certified Modules",
+  "Review Simplify EMR v4.0 certified modules, clinical quality measures, costs, API information, and two-factor authentication.",
+  "/additional-costs",
+);
 
 const qualityMeasures = [
   {

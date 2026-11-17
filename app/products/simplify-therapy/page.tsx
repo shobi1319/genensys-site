@@ -1,6 +1,13 @@
 
 import "./simplify-therapy.css";
 import Link from "next/link";
+import { createPageMetadata } from "@/lib/metadata";
+
+export const metadata = createPageMetadata(
+  "Simplify Therapy",
+  "Learn about Simplify Therapy software for therapy practice management and clinical workflows.",
+  "/products/simplify-therapy",
+);
 
 const challenges = [
   {
@@ -114,7 +121,7 @@ function TherapyWorkflow() {
 
 export default function SimplifyTherapyPage() {
   return (
-    <main className="st-page">
+    <main id="main-content" className="st-page">
       {/* HERO */}
       <section className="st-hero">
         <div className="st-container st-hero-grid">

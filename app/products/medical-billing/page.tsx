@@ -2,49 +2,70 @@
 import "./medical-billing.css";
 import Image from "next/image";
 import Link from "next/link";
+import type { ReactNode } from "react";
+import { createPageMetadata } from "@/lib/metadata";
 
-const advantages = [
+export const metadata = createPageMetadata(
+  "Medical Billing Services",
+  "Explore Genensys medical billing and revenue cycle support for healthcare practices.",
+  "/products/medical-billing",
+);
+
+type AdvantageIconName =
+  | "tools"
+  | "diagram"
+  | "check"
+  | "growth"
+  | "billing"
+  | "network";
+
+const advantages: {
+  number: string;
+  title: string;
+  description: string;
+  icon: AdvantageIconName;
+}[] = [
   {
     number: "01",
     title: "Technology & tools",
     description:
       "Our billing experts manage your revenue cycle with technology and practical support, helping your practice collect without carrying the entire administrative workload.",
-    icon: "tools.png",
+    icon: "tools",
   },
   {
     number: "02",
     title: "Thrive through change",
     description:
       "Changing regulations, compliance requirements, and incentive programs can challenge your staff. Our team and experience can help you navigate those demands.",
-    icon: "diagram.png",
+    icon: "diagram",
   },
   {
     number: "03",
     title: "Get started with ease",
     description:
       "Start with low upfront costs, no long-term agreements, and the flexibility to use our services while transitioning to in-house billing software.",
-    icon: "checked.png",
+    icon: "check",
   },
   {
     number: "04",
     title: "Expand your practice",
     description:
       "Whether you are starting a practice, adding providers, or seeing more patients, billing resources can scale alongside your needs.",
-    icon: "learning.png",
+    icon: "growth",
   },
   {
     number: "05",
     title: "Improve cash flow",
     description:
       "Experienced claims submission and collections support can help improve financial performance while you focus on patient care.",
-    icon: "1-rcm.png",
+    icon: "billing",
   },
   {
     number: "06",
     title: "Connected operations",
     description:
       "Use connected billing technologies to measure, monitor, and better understand the financial performance of your practice.",
-    icon: "network.png",
+    icon: "network",
   },
 ];
 
@@ -78,6 +99,69 @@ const strengths = [
     icon: "business-report.png",
   },
 ];
+
+const advantageIcons: Record<AdvantageIconName, ReactNode> = {
+  tools: (
+    <>
+      <path d="M4 20 14.5 9.5" />
+      <path d="m13 5 6-2 2 2-2 6" />
+      <path d="m4 20 2-6 4 4-6 2Z" />
+    </>
+  ),
+  diagram: (
+    <>
+      <circle cx="6" cy="6" r="2" />
+      <circle cx="18" cy="6" r="2" />
+      <circle cx="12" cy="18" r="2" />
+      <path d="M8 6h8M7 8l4 8M17 8l-4 8" />
+    </>
+  ),
+  check: (
+    <>
+      <circle cx="12" cy="12" r="9" />
+      <path d="m8 12 2.5 2.5L16 9" />
+    </>
+  ),
+  growth: (
+    <>
+      <path d="M4 19V5M4 19h16" />
+      <path d="m7 15 4-4 3 2 5-6" />
+      <path d="M15 7h4v4" />
+    </>
+  ),
+  billing: (
+    <>
+      <rect x="5" y="3" width="14" height="18" rx="2" />
+      <path d="M8 8h8M8 12h3M8 16h8" />
+    </>
+  ),
+  network: (
+    <>
+      <circle cx="12" cy="12" r="2.5" />
+      <circle cx="5" cy="6" r="1.5" />
+      <circle cx="19" cy="6" r="1.5" />
+      <circle cx="5" cy="18" r="1.5" />
+      <circle cx="19" cy="18" r="1.5" />
+      <path d="m7 7.5 3.2 3M17 7.5l-3.2 3M7 16.5l3.2-3M17 16.5l-3.2-3" />
+    </>
+  ),
+};
+
+function AdvantageIcon({ name }: { name: AdvantageIconName }) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth="1.8"
+      aria-hidden="true"
+    >
+      {advantageIcons[name]}
+    </svg>
+  );
+}
 
 const workflow = [
   {
@@ -207,7 +291,7 @@ function BillingDashboard() {
 
 export default function MedicalBillingPage() {
   return (
-    <main className="mb-page">
+    <main id="main-content" className="mb-page">
       {/* HERO */}
       <section className="mb-hero">
         <div className="mb-container mb-hero-grid">
@@ -249,8 +333,8 @@ export default function MedicalBillingPage() {
           <div className="mb-hero-visual">
             <div className="mb-hero-photo">
               <Image
-                src="https://genensys.com/wp-content/uploads/2023/11/6-1024x675.jpg"
-                alt="Healthcare professional working with medical billing software"
+                src="/images/revenue-cycle-workflow.svg"
+                alt="Illustration of revenue cycle and billing workflows."
                 fill
                 priority
                 sizes="(max-width: 850px) 100vw, 52vw"
@@ -306,12 +390,7 @@ export default function MedicalBillingPage() {
                 <div className="mb-advantage-top">
                   <span className="mb-card-number">{item.number}</span>
                   <div className="mb-icon-frame">
-                    <Image
-                      src={`https://genensys.com/wp-content/uploads/2023/10/${item.icon}`}
-                      alt=""
-                      width={42}
-                      height={42}
-                    />
+                    <AdvantageIcon name={item.icon} />
                   </div>
                 </div>
                 <h3>{item.title}</h3>
@@ -447,12 +526,27 @@ export default function MedicalBillingPage() {
         <div className="mb-container mb-reporting-grid">
           <div className="mb-reporting-visual">
             <div className="mb-reporting-image">
-              <Image
-                src="https://genensys.com/wp-content/uploads/2023/10/business-report.png"
-                alt=""
-                width={74}
-                height={74}
-              />
+              <svg
+                viewBox="0 0 48 48"
+                role="img"
+                aria-label="Revenue reporting icon"
+              >
+                <path
+                  d="M8 37V25M19 37V18M30 37V11M41 37V6"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeLinecap="round"
+                  strokeWidth="5"
+                />
+                <path
+                  d="m8 18 11-7 11 3L41 6"
+                  fill="none"
+                  stroke="#ed2545"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                />
+              </svg>
             </div>
             <div className="mb-reporting-mini">
               <span>FINANCIAL VISIBILITY</span>

@@ -1,12 +1,12 @@
-import type { Metadata } from "next";
 import Link from "next/link";
+import { createPageMetadata } from "@/lib/metadata";
 import "./real-world-testing.css";
 
-export const metadata: Metadata = {
-  title: "Real World Testing",
-  description:
-    "Review Genensys real-world testing information by certification criteria and reporting year.",
-};
+export const metadata = createPageMetadata(
+  "Real World Testing",
+  "Review Genensys real-world testing information by certification criteria and reporting year.",
+  "/real-world-testing",
+);
 
 type DocumentKind = "Plan" | "Results";
 

@@ -1,5 +1,12 @@
 
 import "./patient-care.css";
+import { createPageMetadata } from "@/lib/metadata";
+
+export const metadata = createPageMetadata(
+  "Patient Care Solutions",
+  "Explore Genensys technology and services designed to support connected patient care workflows.",
+  "/products/patient-care",
+);
 import Link from "next/link";
 
 const portalFeatures = [
@@ -128,7 +135,7 @@ function PortalPreview() {
 
 export default function PatientCarePage() {
   return (
-    <main className="pp-page">
+    <main id="main-content" className="pp-page">
       {/* HERO */}
       <section className="pp-hero">
         <div className="pp-container pp-hero-grid">

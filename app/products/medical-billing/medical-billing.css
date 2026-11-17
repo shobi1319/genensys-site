@@ -515,12 +515,12 @@
   place-items: center;
   border-radius: 5px;
   background: #f0f6fa;
+  color: var(--mb-blue);
 }
 
-.mb-icon-frame img {
+.mb-icon-frame svg {
   width: 34px;
   height: 34px;
-  object-fit: contain;
   opacity: 0.8;
 }
 
@@ -946,6 +946,12 @@
 .mb-reporting-image img {
   object-fit: contain;
   opacity: 0.8;
+}
+
+.mb-reporting-image svg {
+  width: 40px;
+  height: 40px;
+  color: #0878bd;
 }
 
 .mb-reporting-mini {
