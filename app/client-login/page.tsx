@@ -105,10 +105,10 @@ export default function ClientLoginPage() {
 
   <div className="client-login-brand-circle">
     <Image
-      src="/images/genensys-logo.png"
-      alt="Genensys logo"
-      width={54}
-      height={54}
+         src="/images/genensys-logo.svg"
+            alt="Genensys"
+            width={64}
+            height={36}
       sizes="69px"
     />
   </div>
