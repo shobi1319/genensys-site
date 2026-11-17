@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="75" y1="66" x2="1128" y2="755" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F3FAFF"/>
+      <stop offset="1" stop-color="#EAF5F8"/>
+    </linearGradient>
+    <linearGradient id="bars" x1="421" y1="342" x2="786" y2="524" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#168FE0"/>
+      <stop offset="1" stop-color="#7950A5"/>
+    </linearGradient>
+    <filter id="shadow" x="84" y="80" width="1032" height="674" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="16"/>
+      <feOffset dy="14"/>
+      <feColorMatrix values="0 0 0 0 0.08 0 0 0 0 0.16 0 0 0 0 0.27 0 0 0 0.14 0"/>
+      <feBlend in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="800" rx="38" fill="url(#bg)"/>
+  <circle cx="1023" cy="149" r="158" fill="#DDF1F5"/>
+  <circle cx="186" cy="695" r="126" fill="#E5E3F5"/>
+  <g filter="url(#shadow)">
+    <rect x="117" y="121" width="966" height="568" rx="28" fill="white"/>
+    <rect x="117" y="121" width="966" height="76" rx="28" fill="#FBFDFF"/>
+    <path d="M117 197H1083" stroke="#E7EDF4" stroke-width="2"/>
+    <circle cx="158" cy="159" r="9" fill="#168FE0"/>
+    <path d="M154 159H162M158 155V163" stroke="white" stroke-width="2" stroke-linecap="round"/>
+    <rect x="182" y="153" width="158" height="12" rx="6" fill="#39556F"/>
+    <rect x="902" y="145" width="139" height="28" rx="14" fill="#E8F7F1"/>
+    <circle cx="921" cy="159" r="5" fill="#36A67B"/>
+    <rect x="935" y="155" width="82" height="8" rx="4" fill="#4B8C75"/>
+    <text x="155" y="250" fill="#718198" font-family="Arial, sans-serif" font-size="12" font-weight="700" letter-spacing="2">REVENUE CYCLE OVERVIEW</text>
+    <text x="155" y="287" fill="#142B49" font-family="Arial, sans-serif" font-size="25" font-weight="700">Billing operations</text>
+    <rect x="155" y="317" width="224" height="121" rx="16" fill="#F7FAFD" stroke="#E7EDF4" stroke-width="2"/>
+    <text x="179" y="350" fill="#718198" font-family="Arial, sans-serif" font-size="12">CLAIM WORKFLOW</text>
+    <rect x="179" y="371" width="129" height="9" rx="4.5" fill="#DCE6EF"/>
+    <rect x="179" y="392" width="170" height="9" rx="4.5" fill="#DCE6EF"/>
+    <rect x="179" y="413" width="97" height="9" rx="4.5" fill="#DCE6EF"/>
+    <circle cx="338" cy="374" r="9" fill="#50B895"/>
+    <circle cx="338" cy="395" r="9" fill="#F0C563"/>
+    <circle cx="338" cy="416" r="9" fill="#168FE0"/>
+    <rect x="397" y="317" width="415" height="274" rx="16" fill="#FCFDFE" stroke="#E7EDF4" stroke-width="2"/>
+    <text x="422" y="351" fill="#718198" font-family="Arial, sans-serif" font-size="12">WORKFLOW ACTIVITY</text>
+    <path d="M436 528H779M436 479H779M436 430H779M436 381H779" stroke="#E8EEF4" stroke-width="2"/>
+    <rect x="460" y="467" width="38" height="61" rx="8" fill="url(#bars)"/>
+    <rect x="520" y="431" width="38" height="97" rx="8" fill="#68B7E9"/>
+    <rect x="580" y="448" width="38" height="80" rx="8" fill="#8E7BC3"/>
+    <rect x="640" y="398" width="38" height="130" rx="8" fill="#168FE0"/>
+    <rect x="700" y="413" width="38" height="115" rx="8" fill="#7950A5"/>
+    <path d="M458 397L535 380L593 389L659 357L729 371L774 350" stroke="#ED2545" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="535" cy="380" r="6" fill="#ED2545"/>
+    <circle cx="659" cy="357" r="6" fill="#ED2545"/>
+    <circle cx="774" cy="350" r="6" fill="#ED2545"/>
+    <rect x="830" y="317" width="225" height="274" rx="16" fill="#F7FAFD" stroke="#E7EDF4" stroke-width="2"/>
+    <text x="854" y="351" fill="#718198" font-family="Arial, sans-serif" font-size="12">FOLLOW-UP QUEUE</text>
+    <circle cx="863" cy="393" r="13" fill="#EAF4FD"/>
+    <path d="M857 393H869M863 387V399" stroke="#168FE0" stroke-width="2" stroke-linecap="round"/>
+    <rect x="887" y="386" width="126" height="7" rx="3.5" fill="#526B84"/>
+    <rect x="887" y="401" width="97" height="6" rx="3" fill="#D1DDE8"/>
+    <circle cx="863" cy="451" r="13" fill="#FFF0F2"/>
+    <path d="M857 451H869" stroke="#ED2545" stroke-width="2" stroke-linecap="round"/>
+    <rect x="887" y="444" width="107" height="7" rx="3.5" fill="#526B84"/>
+    <rect x="887" y="459" width="135" height="6" rx="3" fill="#D1DDE8"/>
+    <circle cx="863" cy="509" r="13" fill="#F1EAF8"/>
+    <path d="M857 509H869" stroke="#7950A5" stroke-width="2" stroke-linecap="round"/>
+    <rect x="887" y="502" width="119" height="7" rx="3.5" fill="#526B84"/>
+    <rect x="887" y="517" width="94" height="6" rx="3" fill="#D1DDE8"/>
+    <rect x="155" y="459" width="224" height="132" rx="16" fill="#F7FAFD" stroke="#E7EDF4" stroke-width="2"/>
+    <text x="179" y="494" fill="#718198" font-family="Arial, sans-serif" font-size="12">PRACTICE SUPPORT</text>
+    <rect x="179" y="515" width="175" height="9" rx="4.5" fill="#DCE6EF"/>
+    <rect x="179" y="537" width="147" height="9" rx="4.5" fill="#DCE6EF"/>
+    <rect x="179" y="559" width="113" height="9" rx="4.5" fill="#DCE6EF"/>
+    <rect x="155" y="613" width="900" height="37" rx="12" fill="#EAF4FD"/>
+    <rect x="179" y="628" width="173" height="7" rx="3.5" fill="#168FE0"/>
+    <rect x="889" y="626" width="135" height="10" rx="5" fill="#C5DBED"/>
+  </g>
+</svg>

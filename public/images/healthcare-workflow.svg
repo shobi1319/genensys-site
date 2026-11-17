@@ -1,0 +1,124 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900" fill="none">
+  <defs>
+    <linearGradient id="background" x1="79" y1="53" x2="1093" y2="855" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F5FAFF"/>
+      <stop offset="1" stop-color="#E9F1FF"/>
+    </linearGradient>
+    <linearGradient id="coat" x1="870" y1="426" x2="1115" y2="834" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#DDEEFF"/>
+    </linearGradient>
+    <linearGradient id="scrubs" x1="947" y1="414" x2="1028" y2="772" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#2696DD"/>
+      <stop offset="1" stop-color="#1768B7"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="121" y1="225" x2="693" y2="690" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#168FE0"/>
+      <stop offset="1" stop-color="#7950A5"/>
+    </linearGradient>
+    <filter id="shadow" x="48" y="93" width="704" height="728" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="20"/>
+      <feGaussianBlur stdDeviation="18"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0.078 0 0 0 0 0.168 0 0 0 0 0.286 0 0 0 0.14 0"/>
+      <feBlend in2="BackgroundImageFix" result="effect1_dropShadow"/>
+      <feBlend in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="900" rx="38" fill="url(#background)"/>
+  <circle cx="1020" cy="188" r="220" fill="#D9ECFF" fill-opacity=".72"/>
+  <circle cx="1104" cy="758" r="246" fill="#E9E4F7" fill-opacity=".78"/>
+  <path d="M653 88C822 27 1013 77 1128 205" stroke="#B8DDF8" stroke-width="2" stroke-dasharray="7 12"/>
+  <path d="M677 813C816 862 1001 839 1114 746" stroke="#C9C0E3" stroke-width="2" stroke-dasharray="7 12"/>
+
+  <g filter="url(#shadow)">
+    <rect x="84" y="130" width="634" height="650" rx="28" fill="white"/>
+    <path d="M112 130H690C705.464 130 718 142.536 718 158V218H84V158C84 142.536 96.536 130 112 130Z" fill="#FBFDFF"/>
+    <path d="M84 218H718" stroke="#E8EEF5" stroke-width="2"/>
+    <circle cx="119" cy="174" r="7" fill="#ED2545"/>
+    <circle cx="143" cy="174" r="7" fill="#F3C66A"/>
+    <circle cx="167" cy="174" r="7" fill="#50B895"/>
+    <rect x="208" y="161" width="137" height="24" rx="12" fill="#EAF4FD"/>
+    <rect x="224" y="170" width="76" height="6" rx="3" fill="#6C9FC9"/>
+    <rect x="110" y="246" width="52" height="508" rx="16" fill="#F4F8FC"/>
+    <rect x="122" y="269" width="28" height="28" rx="9" fill="#168FE0"/>
+    <path d="M131 283H141M136 278V288" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+    <rect x="122" y="318" width="28" height="28" rx="9" fill="#E4EDF6"/>
+    <rect x="130" y="326" width="12" height="12" rx="2" stroke="#7489A0" stroke-width="2"/>
+    <rect x="122" y="367" width="28" height="28" rx="9" fill="#E4EDF6"/>
+    <path d="M130 381H142M136 375V387" stroke="#7489A0" stroke-width="2" stroke-linecap="round"/>
+    <rect x="122" y="416" width="28" height="28" rx="9" fill="#E4EDF6"/>
+    <path d="M130 430H142M130 435H139" stroke="#7489A0" stroke-width="2" stroke-linecap="round"/>
+
+    <text x="188" y="271" fill="#718198" font-family="Arial, sans-serif" font-size="12" font-weight="700" letter-spacing="2">PRACTICE OVERVIEW</text>
+    <text x="188" y="306" fill="#142B49" font-family="Arial, sans-serif" font-size="24" font-weight="700">Care, connected.</text>
+    <rect x="555" y="257" width="132" height="32" rx="16" fill="#E8F7F1"/>
+    <circle cx="575" cy="273" r="5" fill="#36A67B"/>
+    <text x="589" y="277" fill="#327B65" font-family="Arial, sans-serif" font-size="11" font-weight="700">WORKFLOW READY</text>
+
+    <rect x="188" y="331" width="229" height="117" rx="16" fill="#F7FAFD" stroke="#E7EDF4" stroke-width="2"/>
+    <rect x="210" y="352" width="30" height="30" rx="9" fill="#E1F1FF"/>
+    <path d="M220 367H230M225 362V372" stroke="#168FE0" stroke-width="2.5" stroke-linecap="round"/>
+    <text x="252" y="365" fill="#6E7F93" font-family="Arial, sans-serif" font-size="12">PATIENT RECORDS</text>
+    <path d="M211 410H260" stroke="#168FE0" stroke-width="8" stroke-linecap="round"/>
+    <path d="M274 410H329" stroke="#D8E4EF" stroke-width="8" stroke-linecap="round"/>
+    <path d="M211 430H362" stroke="#E7EDF4" stroke-width="6" stroke-linecap="round"/>
+
+    <rect x="435" y="331" width="252" height="117" rx="16" fill="#F7FAFD" stroke="#E7EDF4" stroke-width="2"/>
+    <text x="457" y="365" fill="#6E7F93" font-family="Arial, sans-serif" font-size="12">CARE WORKFLOWS</text>
+    <path d="M460 414L493 393L527 403L562 376L596 389L642 360" stroke="url(#accent)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M460 423H661" stroke="#E7EDF4" stroke-width="2"/>
+    <circle cx="493" cy="393" r="5" fill="#168FE0"/>
+    <circle cx="562" cy="376" r="5" fill="#7950A5"/>
+    <circle cx="642" cy="360" r="5" fill="#ED2545"/>
+
+    <rect x="188" y="468" width="499" height="270" rx="16" fill="white" stroke="#E7EDF4" stroke-width="2"/>
+    <text x="212" y="505" fill="#142B49" font-family="Arial, sans-serif" font-size="15" font-weight="700">A more organized day</text>
+    <text x="212" y="528" fill="#8A99AA" font-family="Arial, sans-serif" font-size="11">Clinical and administrative work, in view</text>
+    <rect x="212" y="552" width="451" height="48" rx="12" fill="#F7FAFD"/>
+    <circle cx="237" cy="576" r="12" fill="#E3F2FF"/>
+    <path d="M232 576H242M237 571V581" stroke="#168FE0" stroke-width="2" stroke-linecap="round"/>
+    <rect x="263" y="569" width="136" height="7" rx="3.5" fill="#42607D"/>
+    <rect x="263" y="583" width="196" height="5" rx="2.5" fill="#D6E0EA"/>
+    <rect x="607" y="569" width="34" height="14" rx="7" fill="#E7F6F0"/>
+    <rect x="212" y="611" width="451" height="48" rx="12" fill="#F7FAFD"/>
+    <circle cx="237" cy="635" r="12" fill="#F0EAF8"/>
+    <path d="M232 635H242M237 630V640" stroke="#7950A5" stroke-width="2" stroke-linecap="round"/>
+    <rect x="263" y="628" width="158" height="7" rx="3.5" fill="#42607D"/>
+    <rect x="263" y="642" width="182" height="5" rx="2.5" fill="#D6E0EA"/>
+    <rect x="607" y="628" width="34" height="14" rx="7" fill="#F3ECFC"/>
+    <rect x="212" y="670" width="451" height="48" rx="12" fill="#F7FAFD"/>
+    <circle cx="237" cy="694" r="12" fill="#FFF0F2"/>
+    <path d="M232 694H242" stroke="#ED2545" stroke-width="2" stroke-linecap="round"/>
+    <rect x="263" y="687" width="124" height="7" rx="3.5" fill="#42607D"/>
+    <rect x="263" y="701" width="203" height="5" rx="2.5" fill="#D6E0EA"/>
+    <rect x="607" y="687" width="34" height="14" rx="7" fill="#FFF0F2"/>
+  </g>
+
+  <g>
+    <circle cx="934" cy="270" r="121" fill="#F2C6A7"/>
+    <path d="M815 273C806 160 860 95 956 102C1045 108 1088 185 1051 293L1023 250C1000 229 981 207 963 178C938 217 891 241 815 248V273Z" fill="#263951"/>
+    <path d="M866 338C889 363 916 375 945 375C972 375 999 362 1018 339L1039 384L1089 408C1127 426 1151 465 1151 511V856H731V514C731 464 758 424 801 406L849 385L866 338Z" fill="url(#coat)"/>
+    <path d="M869 373L945 432L1018 373L1047 856H840L869 373Z" fill="url(#scrubs)"/>
+    <path d="M863 373L945 434L900 480L842 394L863 373Z" fill="white"/>
+    <path d="M1023 373L945 434L990 480L1048 394L1023 373Z" fill="white"/>
+    <path d="M923 443L945 461L967 443L980 856H910L923 443Z" fill="#F6FAFE"/>
+    <path d="M842 492C808 526 795 564 805 598L847 719C857 749 884 762 908 751C932 741 937 714 924 689L887 584L916 538L842 492Z" fill="#F2C6A7"/>
+    <path d="M1045 492C1077 526 1090 563 1078 598L1040 711C1030 742 1002 755 978 744C956 734 952 707 963 682L997 584L969 538L1045 492Z" fill="#F2C6A7"/>
+    <rect x="864" y="592" width="161" height="119" rx="17" transform="rotate(-7 864 592)" fill="white" stroke="#D8E5F0" stroke-width="3"/>
+    <rect x="886" y="617" width="72" height="8" rx="4" transform="rotate(-7 886 617)" fill="#168FE0"/>
+    <rect x="882" y="638" width="119" height="6" rx="3" transform="rotate(-7 882 638)" fill="#D5E1EC"/>
+    <rect x="879" y="657" width="101" height="6" rx="3" transform="rotate(-7 879 657)" fill="#D5E1EC"/>
+    <path d="M887 681L908 678L923 686L945 675L967 681" stroke="#7950A5" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="899" cy="276" r="8" fill="#263951"/>
+    <circle cx="976" cy="276" r="8" fill="#263951"/>
+    <path d="M918 321C934 332 954 332 970 320" stroke="#A85F58" stroke-width="5" stroke-linecap="round"/>
+    <path d="M852 848H1094" stroke="#B8DDF8" stroke-width="12" stroke-linecap="round"/>
+  </g>
+
+  <circle cx="751" cy="199" r="31" fill="white"/>
+  <path d="M751 185V213M737 199H765" stroke="#ED2545" stroke-width="5" stroke-linecap="round"/>
+  <circle cx="1084" cy="434" r="24" fill="#E5F5EF"/>
+  <path d="M1073 434L1081 442L1096 425" stroke="#36A67B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

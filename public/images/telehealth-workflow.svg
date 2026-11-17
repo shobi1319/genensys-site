@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="82" y1="42" x2="1098" y2="789" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F5FAFF"/>
+      <stop offset="1" stop-color="#EDEBFA"/>
+    </linearGradient>
+    <linearGradient id="screen" x1="182" y1="151" x2="894" y2="706" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#173C68"/>
+      <stop offset="1" stop-color="#285B8C"/>
+    </linearGradient>
+    <filter id="shadow" x="80" y="74" width="1040" height="700" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="17"/>
+      <feOffset dy="15"/>
+      <feColorMatrix values="0 0 0 0 0.08 0 0 0 0 0.16 0 0 0 0 0.27 0 0 0 0.15 0"/>
+      <feBlend in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="800" rx="38" fill="url(#bg)"/>
+  <circle cx="1001" cy="170" r="156" fill="#DBE9FF"/>
+  <circle cx="165" cy="689" r="130" fill="#E8E1F4"/>
+  <g filter="url(#shadow)">
+    <rect x="111" y="108" width="978" height="584" rx="30" fill="white"/>
+    <rect x="136" y="133" width="642" height="430" rx="22" fill="url(#screen)"/>
+    <circle cx="455" cy="313" r="104" fill="#F1C4A5"/>
+    <path d="M351 318C342 223 392 179 466 179C542 179 578 232 558 327L537 291C514 276 492 254 478 229C455 267 412 286 353 295L351 318Z" fill="#263951"/>
+    <path d="M389 408C409 427 433 437 457 437C482 437 506 426 524 407L563 437C590 456 609 489 609 523V563H300V523C300 488 321 457 349 438L389 408Z" fill="#8BC6EF"/>
+    <path d="M416 427L457 461L499 427L521 563H393L416 427Z" fill="#F9FCFF"/>
+    <path d="M440 458C439 493 478 493 477 458" stroke="#168FE0" stroke-width="8" stroke-linecap="round"/>
+    <circle cx="423" cy="318" r="7" fill="#263951"/>
+    <circle cx="488" cy="318" r="7" fill="#263951"/>
+    <path d="M433 356C446 366 463 366 476 355" stroke="#A85F58" stroke-width="4" stroke-linecap="round"/>
+    <rect x="631" y="153" width="125" height="35" rx="17.5" fill="#FFFFFF" fill-opacity=".16"/>
+    <circle cx="650" cy="170" r="5" fill="#67D6B2"/>
+    <rect x="664" y="166" width="71" height="7" rx="3.5" fill="#FFFFFF" fill-opacity=".8"/>
+    <rect x="136" y="586" width="642" height="77" rx="18" fill="#F8FAFD"/>
+    <circle cx="457" cy="624" r="18" fill="#E8F3FF"/>
+    <path d="M451 624H463M457 618V630" stroke="#168FE0" stroke-width="2.5" stroke-linecap="round"/>
+    <circle cx="404" cy="624" r="18" fill="#E8F3FF"/>
+    <path d="M398 624H410M404 618V630" stroke="#168FE0" stroke-width="2.5" stroke-linecap="round"/>
+    <circle cx="510" cy="624" r="18" fill="#FFF0F2"/>
+    <path d="M504 624H516" stroke="#ED2545" stroke-width="2.5" stroke-linecap="round"/>
+    <rect x="801" y="133" width="263" height="530" rx="22" fill="#FAFCFE" stroke="#E6EDF4" stroke-width="2"/>
+    <circle cx="843" cy="179" r="20" fill="#EAF4FD"/>
+    <path d="M835 180H851M843 172V188" stroke="#168FE0" stroke-width="2.5" stroke-linecap="round"/>
+    <rect x="876" y="170" width="125" height="8" rx="4" fill="#39556F"/>
+    <rect x="876" y="186" width="82" height="6" rx="3" fill="#C5D1DE"/>
+    <text x="832" y="242" fill="#6F8094" font-family="Arial, sans-serif" font-size="12" font-weight="700" letter-spacing="1.5">VISIT NOTES</text>
+    <rect x="832" y="261" width="201" height="68" rx="13" fill="white" stroke="#E6EDF4"/>
+    <rect x="850" y="280" width="98" height="7" rx="3.5" fill="#657A91"/>
+    <rect x="850" y="296" width="157" height="6" rx="3" fill="#DCE5EE"/>
+    <rect x="832" y="345" width="201" height="68" rx="13" fill="white" stroke="#E6EDF4"/>
+    <rect x="850" y="364" width="121" height="7" rx="3.5" fill="#657A91"/>
+    <rect x="850" y="380" width="145" height="6" rx="3" fill="#DCE5EE"/>
+    <rect x="832" y="429" width="201" height="68" rx="13" fill="white" stroke="#E6EDF4"/>
+    <rect x="850" y="448" width="104" height="7" rx="3.5" fill="#657A91"/>
+    <rect x="850" y="464" width="163" height="6" rx="3" fill="#DCE5EE"/>
+    <rect x="832" y="525" width="201" height="44" rx="12" fill="#EAF4FD"/>
+    <rect x="853" y="543" width="112" height="7" rx="3.5" fill="#168FE0"/>
+    <circle cx="1040" cy="632" r="11" fill="#50B895"/>
+  </g>
+</svg>
