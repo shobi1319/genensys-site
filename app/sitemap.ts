@@ -1,7 +1,6 @@
 import type { MetadataRoute } from "next";
 
-const siteUrl = "https://genensys.com";
-
+const siteUrl = "https://genensys-site.vercel.app";
 const pages: {
   path: string;
   changeFrequency: "weekly" | "monthly" | "yearly";
